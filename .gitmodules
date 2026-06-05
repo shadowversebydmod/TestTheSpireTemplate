@@ -1,0 +1,9 @@
+[submodule "local/BaseLib-StS2"]
+	path = local/BaseLib-StS2
+	url = https://github.com/Alchyr/BaseLib-StS2.git
+[submodule "local/MinionLib"]
+	path = local/MinionLib
+	url = https://github.com/FuYnAloft/MinionLib.git
+[submodule "bundled_skills"]
+	path = bundled_skills
+	url = https://github.com/shadowversebydmod/TestTheSpireSkills.git
