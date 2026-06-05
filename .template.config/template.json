@@ -1,9 +1,9 @@
 {
-    "author": "Alchyr",
-    "name": "Slay the Spire 2 Character",
-    "description": "A Slay the Spire 2 character mod relying on BaseLib",
-    "identity": "Alchyr.Sts2CharMod",
-    "shortName": "alchyrsts2charmod",
+    "author": "shadowversebydmod",
+    "name": "TestTheSpire STS2 Character Mod",
+    "description": "A Slay the Spire 2 character mod template with BaseLib, MinionLib, TestTheSpire tests, and bundled Codex skills.",
+    "identity": "ShadowverseBydMod.TestTheSpireTemplate.Sts2CharMod",
+    "shortName": "testthespire-sts2-character",
     "tags": {
         "language": "C#",
         "type": "project"
@@ -18,9 +18,23 @@
                         ".git/**",
                         ".godot/**",
                         ".idea/**",
+                        "artifacts/**",
+                        "bin/**",
+                        "obj/**",
+                        "**/bin/**",
+                        "**/obj/**",
+                        "mod/**",
+                        "mod-deps/**",
+                        "**/mod/**",
+                        "**/mod-deps/**",
+                        "TestResults/**",
+                        "coverage/**",
                         "local/**",
+                        "LocalSettings.props",
                         "Properties/**",
-                        "README.md"
+                        "README.md",
+                        "README.en.md",
+                        "bundled_skills/**"
                     ]
                 }
             ]
