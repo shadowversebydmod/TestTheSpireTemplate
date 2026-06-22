@@ -2,8 +2,8 @@
 using BaseLib.Utils;
 using CharMod.CharModCode.Character;
 using CharMod.CharModCode.Extensions;
+using CharMod.CharModCode.Interop;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MinionLib.Component;
 
 namespace CharMod.CharModCode.Cards;
 
