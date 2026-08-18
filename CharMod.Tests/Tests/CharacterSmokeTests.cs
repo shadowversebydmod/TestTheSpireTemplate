@@ -1,6 +1,7 @@
 using CharMod.CharModCode.Cards;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.Models.Characters;
 using MegaCrit.Sts2.Core.Models.Monsters;
 using TestTheSpire;
 using Xunit;
@@ -47,5 +48,27 @@ public sealed class CharacterSmokeTests : CombatTestSuite
         await Play(strike, enemy);
 
         Assert.Equal(hpBefore - 12, enemy.CurrentHp);
+    }
+}
+
+public sealed class MultiplayerSmokeTests : CombatTestSuite
+{
+    protected override void ConfigureBattle(CombatTestBattleBuilder battle)
+    {
+        battle
+            .Player<Ironclad>()
+            .AddRemotePlayer<Ironclad>(2)
+            .AddEnemy<BigDummy>()
+            .WithSeed("charmod-template-multiplayer-smoke");
+    }
+
+    [Fact]
+    public async Task Multiplayer_host_context_loads_and_executes_an_action()
+    {
+        Assert.Equal(2, Players.Count);
+        Assert.Equal((ulong)2, PlayerWithNetId(2).NetId);
+
+        var strike = await AddToHand<StrikeIronclad>();
+        await Play(strike, EnemyAt(0));
     }
 }
